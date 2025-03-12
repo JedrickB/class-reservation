@@ -1,0 +1,12 @@
+img {
+    width: 50px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 10px;
+}
+
+em {
+color: rgb(200, 255, 0);
+font-style: initial;
+text-align: left;
+}
