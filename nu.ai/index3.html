@@ -3,70 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>grid</title>
     <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
     <div class="container">
-      <input type="radio" name="slider" id="item-1" checked />
-      <input type="radio" name="slider" id="item-2" />
-      <input type="radio" name="slider" id="item-3" />
-      <div class="cards">
-        <label class="card" for="item-1" id="song-1">
-          <img src="carll.jpg" alt="song" />
-        </label>
-        <label class="card" for="item-2" id="song-2">
-          <img src="carlll.png" alt="song" />
-        </label>
-        <label class="card" for="item-3" id="song-3">
-          <img src="5man.jpg" alt="song" />
-        </label>
+      <div class="timeline">
+        <div class="time-marker">Time</div>
+        <div class="time-marker">7 AM</div>
+        <div class="time-marker">8 AM</div>
+        <div class="time-marker">9 AM</div>
+        <div class="time-marker">10 AM</div>
+        <div class="time-marker">11 AM</div>
+        <div class="time-marker">12 PM</div>
+        <div class="time-marker">1 PM</div>
+        <div class="time-marker">2 PM</div>
+        <div class="time-marker">3 PM</div>
+        <div class="time-marker">4 PM</div>
+        <div class="time-marker">5 PM</div>
+        <div class="time-marker">6 PM</div>
+        <div class="time-marker">7 PM</div>
       </div>
-      <div class="player">
-        <div class="upper-part">
-          <div class="play-icon">
-            <svg
-              width="20"
-              height="20"
-              fill="#2992dc"
-              stroke="#2992dc"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="feather feather-play"
-              viewBox="0 0 24 24"
-            >
-              <defs />
-              <path d="M5 3l14 9-14 9V3z" />
-            </svg>
-          </div>
-          <div class="info-area" id="test">
-            <label class="song-info" id="song-info-1">
-              <div class="title">Carl</div>
-              <div class="sub-line">
-                <div class="subtitle">NUAY</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-2">
-              <div class="title">FUCKU</div>
-              <div class="sub-line">
-                <div class="subtitle">Wadafap!</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-3">
-              <div class="title">WE THE BEST MUSIC!</div>
-              <div class="sub-line">
-                <div class="subtitle">5MAN</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-          </div>
-        </div>
-        <div class="progress-bar">
-          <span class="progress"></span>
-        </div>
+
+      <div class="schedule">
+        <div class="cell-header">Sunday</div>
+        <div class="cell-header">Monday</div>
+        <div class="cell-header">Tuesday</div>
+        <div class="cell-header">Wednesday</div>
+        <div class="cell-header">Thursday</div>
+        <div class="cell-header">Friday</div>
+        <div class="cell-header">Saturday</div>
+
+        <script>
+          for (let i = 0; i < 7 * 13; i++) {
+            document.write('<div class="cell">Time slot</div>');
+          }
+        </script>
       </div>
     </div>
   </body>

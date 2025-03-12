@@ -3,20 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>grid</title>
+    <link rel="stylesheet" href="homepage.css" />
   </head>
   <body>
-    <h1>kagagawan ni carl ang lahat!</h1>
-    <div class="box">
-      <a class="button" href="#popup1">let me Pop up</a>
-    </div>
+    <div class="container">
+      <!-- <div class="timeline">
+        <div class="time-marker">Time</div>
+        <div class="time-marker">7 AM</div>
+        <div class="time-marker">8 AM</div>
+        <div class="time-marker">9 AM</div>
+        <div class="time-marker">10 AM</div>
+        <div class="time-marker">11 AM</div>
+        <div class="time-marker">12 PM</div>
+        <div class="time-marker">1 PM</div>
+        <div class="time-marker">2 PM</div>
+        <div class="time-marker">3 PM</div>
+        <div class="time-marker">4 PM</div>
+        <div class="time-marker">5 PM</div>
+        <div class="time-marker">6 PM</div>
+        <div class="time-marker">7 PM</div>
+      </div> -->
 
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <h2>Here i am</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">thank you carl ang kulit mo isa kang choker!</div>
+      <div class="schedule">
+        <div class="cell-header">Time</div>
+        <div class="cell-header">Sunday</div>
+        <div class="cell-header">Monday</div>
+        <div class="cell-header">Tuesday</div>
+        <div class="cell-header">Wednesday</div>
+        <div class="cell-header">Thursday</div>
+        <div class="cell-header">Friday</div>
+        <div class="cell-header">Saturday</div>
+
+        <script>
+          for (let i = 1; i <= 8 * 14; i++) {
+            document.write('<div class="cell">Time slot</div>');
+            if (i % 8 == 1) {
+              document.write('<div class="cell">${i}</div>');
+            }
+          }
+        </script>
       </div>
     </div>
   </body>
