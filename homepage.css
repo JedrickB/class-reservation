@@ -1,38 +1,27 @@
+.schedule-card { 
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    grid: 10px;
+
+}
 .schedule {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(14, 1fr);
     gap: 5px;
     width: 100%;
+    height: 100%;
     max-width: 800px;
-    margin: auto;
-}
-.timeline { 
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);  
-    gap: 5px;
-    width: 100%;
-    max-width: 50px;
-}
-.cell {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    background: #9f9f9f;
-}
+  }
+
 .header {
-    font-weight: bold;
-    background: #ddd;
+  font-weight: bold;
+  background: #ddd;
 }
-.container { 
+
+.container mt-4 { 
     display: flex;
     flex-direction: row;
-}
-.cell, .cell-header, .time-marker{ 
-    flex: 1;
-    border: 1px solid black;
-    padding: 10px;
-    height: 50px;
-    width: 70px;
-    text-align: center; 
+    width: 1000px;
+    margin: auto;
 }

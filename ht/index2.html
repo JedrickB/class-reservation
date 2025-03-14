@@ -1,28 +1,80 @@
-<div class="calendar">
-  <div class="timeline">
-    <div class="spacer"></div>
-    <div class="time-marker">7 AM</div>
-    <div class="time-marker">8 AM</div>
-    <div class="time-marker">9 AM</div>
-    <div class="time-marker">10 AM</div>
-    <div class="time-marker">11 AM</div>
-    <div class="time-marker">12 PM</div>
-    <div class="time-marker">1 PM</div>
-    <div class="time-marker">2 PM</div>
-    <div class="time-marker">3 PM</div>
-    <div class="time-marker">4 PM</div>
-    <div class="time-marker">5 PM</div>
-    <div class="time-marker">6 PM</div>
-    <div class="time-marker">7 PM</div>
-  </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Selector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+      }
 
-  <div class="schedule">
-    <div class="cell-header">Sunday</div>
-    <div class="cell-header">Monday</div>
-    <div class="cell-header">Tuesday</div>
-    <div class="cell-header">Wednesday</div>
-    <div class="cell-header">Thursday</div>
-    <div class="cell-header">Friday</div>
-    <div class="cell-header">Saturday</div>
-  </div>
-</div>
+      .container {
+        width: 300px;
+      }
+
+      .button {
+        background-color: black;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .dropdown {
+        display: none;
+        background-color: white;
+        border: 1px solid black;
+        width: 100%;
+      }
+
+      .dropdown div {
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .dropdown div:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="button" onclick="toggleDropdown()">Select Schedule</button>
+      <div class="dropdown" id="scheduleDropdown">
+        <div onclick="selectDay('Monday')">Monday</div>
+        <div onclick="selectDay('Tuesday')">Tuesday</div>
+        <div onclick="selectDay('Wednesday')">Wednesday</div>
+        <div onclick="selectDay('Thursday')">Thursday</div>
+        <div onclick="selectDay('Friday')">Friday</div>
+        <div onclick="selectDay('Saturday')">Saturday</div>
+      </div>
+
+      <button class="button">Select Time</button>
+      <button class="button">Class Name</button>
+      <button class="button">Confirm ></button>
+    </div>
+
+    <script>
+      function toggleDropdown() {
+        var dropdown = document.getElementById("scheduleDropdown");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      function selectDay(day) {
+        document.querySelector(".button").textContent = day;
+        document.getElementById("scheduleDropdown").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
